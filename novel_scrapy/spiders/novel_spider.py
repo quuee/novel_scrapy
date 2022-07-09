@@ -6,7 +6,7 @@ from novel_scrapy.items import NovelScrapyItem
 
 class NovelSpider(scrapy.Spider):
     name = "novel"
-    start_urls = ["https://www.81zw.com/book/45501/"]
+    start_urls = ["https://www.31xiaoshuo.com/183/183416/"]
 
     def parse(self, response):
         # print(type(response))
