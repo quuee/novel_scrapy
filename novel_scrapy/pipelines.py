@@ -23,10 +23,12 @@ class NovelScrapyPipeline:
             "sort": item["sort"], "title": item["title"], "content": item["content"]}
         book_new = pd.DataFrame(item_dict, index=[0])
         self.book = pd.concat([self.book, book_new], axis=0, ignore_index=True)
-        return item
+        
 
     def close_spider(self, spider):
-        store_file = os.path.dirname(__file__) + "/temp.txt"
+        store_file = "/home/cx/Documents/temp.txt"
+        if not os.path.exists(store_file):
+            os.mknod(store_file)
         self.file = open(store_file, "a", encoding="utf-8")
         # 网上看到用pandas排序
         self.book = self.book.sort_values("sort", ascending=True)
@@ -34,8 +36,8 @@ class NovelScrapyPipeline:
         title_list = list(self.book["title"])
         content_list = list(self.book["content"])
         for i in range(len(title_list)):
-            print(type(title_list[i]))
-            print(title_list[i])
+            # print(type(title_list[i]))
+            # print(title_list[i])
             self.file.write(str(title_list[i])+"\n")
             # \r对应的ASCII码为：0xd，\n对应的ASCII码为：0xa
             self.file.write(str(content_list[i]).replace(
