@@ -7,8 +7,6 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-from tkinter import FALSE
-
 
 BOT_NAME = 'novel_scrapy'
 

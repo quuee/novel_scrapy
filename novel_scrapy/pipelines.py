@@ -6,7 +6,7 @@
 
 # useful for handling different item types with a single interface
 import os
-# from itemadapter import ItemAdapter
+from itemadapter import ItemAdapter
 
 # from novel_scrapy.items import NovelScrapyItem
 import pandas as pd
@@ -26,6 +26,7 @@ class NovelScrapyPipeline:
         
 
     def close_spider(self, spider):
+        print("创建文件")
         store_file = "/home/cx/Documents/temp.txt"
         if not os.path.exists(store_file):
             os.mknod(store_file)
