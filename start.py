@@ -9,7 +9,7 @@ from novel_scrapy.spiders.novel_spider import NovelSpider
 def test1():
     cmdline.execute('scrapy crawl novel'.split())
 
-if __name__ == '__main__':
+def test2():
     settings = get_project_settings()
     
     configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
@@ -18,3 +18,6 @@ if __name__ == '__main__':
     d = runner.join() # 返回一个Twisted中的Deferred对象
     d.addBoth(lambda _:reactor.stop())
     reactor.run()
+
+if __name__ == '__main__':
+    cmdline.execute('scrapy crawl ddxs'.split())
