@@ -20,4 +20,5 @@ def test2():
     reactor.run()
 
 if __name__ == '__main__':
-    cmdline.execute('scrapy crawl ddxs'.split())
+    # cmdline.execute('scrapy crawl ddxs'.split())
+    test1()

@@ -12,6 +12,7 @@ class NovelSpider(scrapy.Spider):
     # custom_settings = {}
 
     def parse(self, response):
+        print('NovelSpider parse')
         el_list = response.xpath("//div[@id='list']/dl/dd/a")
         for el in el_list:
             title = el.xpath("./text()").get()
