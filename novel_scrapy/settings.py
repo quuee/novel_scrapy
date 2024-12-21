@@ -22,8 +22,8 @@ DEFAULT_REQUEST_HEADERS = {
 }
 
 DOWNLOADER_MIDDLEWARES = {
-#    "newsInfo.middlewares.NewsinfoDownloaderMiddleware": 543,
-   "novel_scrapy.middlewares.SelenuimMiddleware": 543,
+#    "novel_scrapy.middlewares.SelenuimMiddleware": 543,
+   "novel_scrapy.middlewares.NovelScrapyDownloaderMiddleware": 543,
 }
 
 ITEM_PIPELINES = {

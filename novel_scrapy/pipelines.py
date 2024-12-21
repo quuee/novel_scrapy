@@ -27,10 +27,13 @@ class NovelScrapyPipeline:
 
     def close_spider(self, spider):
         print("创建文件")
-        store_file = "C:/Users/ax/Documents/Projects/novel_scrapy/temp.txt"
+        store_file = "./temp.txt"
+        # store_file = os.path.join(os.path.dirname(os.path.abspath(__file__)),"temp.txt")
+        
         if not os.path.exists(store_file):
             # os.mknod(store_file) # windows没有这个方法
             pass 
+        
         self.file = open(store_file, "a", encoding="utf-8")
         # 网上看到用pandas排序
         self.book = self.book.sort_values("sort", ascending=True)

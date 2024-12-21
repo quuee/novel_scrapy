@@ -7,7 +7,7 @@ from novel_scrapy.items import NovelScrapyItem
 class NovelSpider(scrapy.Spider):
     # name属性：必须且唯一
     name = "novel" 
-    start_urls = ["https://www.31xiaoshuo.com/137/137387/"]
+    start_urls = ["https://www.ddyveshu.cc/27246_27246605/"]
     # allowed_domains = []
     # custom_settings = {}
 
